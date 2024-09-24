@@ -9,7 +9,7 @@ export default function Header() {
     <Navbar>
 
       <Link to='/'>
-        <img src="/mj-logo.png" alt="logo" className='h-32'/>
+        <img src="/mj-logo.png" alt="logo" className='h-24 sm:h-32'/>
       </Link>
 
       <div className="flex gap-2 md:order-2">
