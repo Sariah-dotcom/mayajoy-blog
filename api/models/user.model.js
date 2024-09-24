@@ -1,7 +1,6 @@
-import { timeStamp } from "console";
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
-const userSchema = new mongo.userSchema({
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -18,7 +17,7 @@ const userSchema = new mongo.userSchema({
         type: String,
         required: true,
     }
-}, {timeStamps: true});
+}, {timestamps: true});
 
 const User = mongoose.model('User', userSchema);
 
