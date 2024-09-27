@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
     const year = new Date().getFullYear();
-    
+
     return (
         <div>
             <footer>
@@ -25,10 +25,11 @@ export default function Footer() {
 
                     <hr className="border-med-green" />
 
-                    <div className="flex items-center justify-end gap-10 py-5 text-med-green">
+                    <div className="flex items-center justify-between gap-10 py-5 text-med-green">
                         <div className="flex gap-1">
                             <p>©</p>
                             {year}
+                            <p>Maya Joy Blog</p>
                         </div>
 
                         <div className="flex gap-5">
