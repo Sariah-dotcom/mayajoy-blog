@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Header from '../components/Header.jsx';
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -53,7 +52,6 @@ export default function SignUp() {
 
   return (
     <div>
-      <Header />
       <div className='min-h-screen mt-20'>
 
         <div className="flex flex-col p-3 gap-10 max-w-3xl mx-auto md:flex-row md:items-center">
