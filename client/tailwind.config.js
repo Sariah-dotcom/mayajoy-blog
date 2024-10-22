@@ -13,6 +13,7 @@ export default {
         'lato': ['Lato', 'sans-serif'],
       },
       colors: {
+        'bright-green': '#095200',
         "dark-green": "#114418",
         "med-green": "#99BC85",
         "light-green": "#BFD8AF",
