@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
-import  { Button, Navbar, TextInput } from 'flowbite-react'
-import { Link, useLocation } from 'react-router-dom'
+import  { Avatar, Button, Dropdown, DropdownDivider, Navbar, TextInput } from 'flowbite-react';
+import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+
   const path = useLocation().pathname;
+  const {currentUser} = useSelector(state => state.user);
+
   return (
     <Navbar>
 
@@ -19,11 +23,45 @@ export default function Header() {
 
         <Button className='w-12 h-10 lg:hidden inline' color='#114418' pill ><AiOutlineSearch /></Button>
 
-        <Link to='/sign-in'>
-          <Button className='bg-dark-green hover:bg-dark-green hover:text-color-white' outline>Sign In</Button>
-        </Link>
-      </div>
+        {/* Dynamically update the header with user data when a user is logged in */}
+        {currentUser ? (
+          <Dropdown
+            arrowIcon={false}
+            inline
 
+            label={
+              <Avatar 
+                alt='user avatar'
+                img={currentUser.profilePicture}
+                rounded
+              />
+            }
+          >
+            {/* Show user data in a dropdown menu */}
+            <Dropdown.Header>
+              <span className='block text-sm'>@{currentUser.username}</span>
+              <span className='block text-sm truncate'>{currentUser.email}</span>
+            </Dropdown.Header>
+
+            <Link to={'/dashboard?tab=profile'}>
+              <Dropdown.Item>Profile</Dropdown.Item>
+            </Link>
+
+            <DropdownDivider />
+
+            <Dropdown.Item>Sign Out</Dropdown.Item>
+
+          </Dropdown>
+        ):
+        (
+          // Show the Sign In button if user is not logged in
+          <Link to='/sign-in'>
+            <Button className='bg-dark-green hover:bg-dark-green hover:text-color-white' outline>Sign In</Button>
+          </Link>
+        )
+        
+      }  
+      </div>
       <Navbar.Toggle></Navbar.Toggle>
   
       <Navbar.Collapse className='font-lato text-dark-green'>
