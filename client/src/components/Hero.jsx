@@ -4,7 +4,7 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 export default function Hero() {
   return (
     <div className='flex justify-center px-5 py-32'>
-       <div className='font-playfair italic text-6xl font-bold text-bright-green'>
+       <div className='font-playfair italic text-6xl font-bold text-bright-green lg:text-8xl'>
           <h1>unfolding the</h1>
           
           <div className='flex items-center gap-3'>

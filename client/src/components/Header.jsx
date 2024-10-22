@@ -10,7 +10,7 @@ export default function Header() {
   const {currentUser} = useSelector(state => state.user);
 
   return (
-    <Navbar>
+    <Navbar className='bg-'>
 
       <Link to='/'>
         <img src="/mj-logo.png" alt="logo" className='h-24 sm:h-32'/>
