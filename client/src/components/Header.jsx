@@ -10,10 +10,10 @@ export default function Header() {
   const {currentUser} = useSelector(state => state.user);
 
   return (
-    <Navbar className='bg-'>
+    <Navbar className='py-4 font-lato font-semibold'>
 
       <Link to='/'>
-        <img src="/mj-logo.png" alt="logo" className='h-24 sm:h-32'/>
+        <h1>Logo</h1>
       </Link>
 
       <div className="flex gap-2 md:order-2">
