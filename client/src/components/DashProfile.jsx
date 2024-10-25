@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Button, TextInput } from 'flowbite-react'
 import { updateStart, updateSuccess, updateFailure, signoutSuccess } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
+import { Link} from 'react-router-dom';
 
 export default function DashProfile() {
     const {currentUser} = useSelector((state) => state.user);
@@ -77,6 +78,21 @@ export default function DashProfile() {
         <TextInput type='password' id='password' placeholder='Password' defaultValue='**********' onChange={handleChange}/>
 
         <Button type='submit' className='bg-dark-green font-lato font-bold'>Update</Button>
+
+        {/* Display 'Create a Post' button only is the user is an admin */}
+        {
+          currentUser.isAdmin && (
+            <Link to='/create-post'>
+              <Button
+              type='button'
+              className='w-full'
+              outline
+              > 
+              Create a Post
+              </Button>
+            </Link>
+          )
+        }
       </form>
 
       <div className='text-red-500 flex justify-between mt-8 font-lato font-semibold'>
