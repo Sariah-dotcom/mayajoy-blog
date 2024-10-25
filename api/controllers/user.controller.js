@@ -7,12 +7,10 @@ export const test = (req, res) => {
 };
 
 export const updateUser = async (req, res, next) => {
-    console.log(req.user);
     //Display error if user is not verified
     if(String(req.user.id) !== String(req.params.userId)){
         return next(errorHandler(403, 'You are not allowed to update this user.'));
     }
-    
 
     //Display error for invalid password length
     if(req.body.password){
@@ -39,9 +37,10 @@ export const updateUser = async (req, res, next) => {
         if(!req.body.username.match(/^[a-zA-Z0-9]+$/)){
             return next(errorHandler(400, 'Username can only contain letters or numbers'));
         }
-        try {
-            const updatedUser = await User.findByIdAndUpdate(req.params.userId, {
-                $set: {
+    }
+    try {
+         const updatedUser = await User.findByIdAndUpdate(req.params.userId, {
+        $set: {
                     username: req.body.username,
                     email: req.body.email,
                     password: req.body.password,
@@ -53,6 +52,16 @@ export const updateUser = async (req, res, next) => {
 
         }catch(error) {
             next(error);
-        }
     }
 };
+
+export const signout = (req, res, next) => {
+    try {
+      res
+        .clearCookie('access_token')
+        .status(200)
+        .json('User has been signed out');
+    } catch (error) {
+      next(error);
+    }
+  };
