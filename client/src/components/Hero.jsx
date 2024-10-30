@@ -3,7 +3,7 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 
 export default function Hero() {
   return (
-    <div className='flex justify-center px-5 py-32 lg:py-16'>
+    <div className='flex justify-center px-5 py-32 h-screen lg:py-16 bg-[url("/hero-bg.png")]'>
        <div className='font-playfair italic text-6xl font-bold text-dark-green flex flex-col lg:text-8xl items-center'>
           <h1>unfolding the</h1>
           

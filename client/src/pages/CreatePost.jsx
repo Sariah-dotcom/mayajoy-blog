@@ -7,7 +7,7 @@ import 'react-quill/dist/quill.snow.css';
 export default function CreatePost() {
   return (
     <div className='p-3 max-w-3xl mx-auto min-h-screen'>
-        <h1 className='font-playfair italic text-3xl font-bold text-dark-green text-center my-7'>Create a Post</h1>
+        <h1 className='font-lato text-3xl font-black text-dark-green text-center my-7'>Create a Post</h1>
         <form className='flex flex-col gap-5'>
             <div className='flex flex-col justify-between gap-4 md:flex-row'>
                 <TextInput type='text' placeholder='Title' required id='title'
