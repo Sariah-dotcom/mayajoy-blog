@@ -9,8 +9,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'libre': ['Libre Calson Display', 'serif'],
         'playfair': ['Playfair Display', 'serif'],
-        'lato': ['Lato', 'sans-serif'],
+        'lato': ['DM Sans', 'sans-serif'],
       },
       colors: {
         'bright-green': '#095200',

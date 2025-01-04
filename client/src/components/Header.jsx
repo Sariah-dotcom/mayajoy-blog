@@ -32,7 +32,7 @@ export default function Header() {
     <Navbar className='py-4 font-lato font-semibold'>
 
       <Link to='/'>
-        <h1>Logo</h1>
+        <img className='w-24' src="/mj-logo.png" alt="logo" />
       </Link>
 
       <div className="flex gap-2 md:order-2">
@@ -83,9 +83,9 @@ export default function Header() {
       </div>
       <Navbar.Toggle></Navbar.Toggle>
   
-      <Navbar.Collapse className='font-lato text-dark-green'>
+      <Navbar.Collapse className='font-lato'>
         <Navbar.Link active={path === '/'} as={'div'}>
-          <Link to='/'>Home</Link>
+          <Link className='uppercase' to='/'>Home</Link>
         </Navbar.Link>
 
         <Navbar.Link active={path === '/about'} as={'div'}>
