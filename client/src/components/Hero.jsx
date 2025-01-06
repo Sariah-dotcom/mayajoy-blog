@@ -37,10 +37,9 @@ export default function Hero() {
         </div>
 
         <div>
-          <h2 className='name-text uppercase font-semibold font-lato text-grey rotate-90'>Maya Abdoussala</h2>
+          <h2 className='name-text text-xs uppercase font-semibold font-lato text-grey rotate-90'>Maya Abdoussala</h2>
         </div>
       </div>
-      {/* <video className='hero-video w-1/2 rounded-lg' src="/placeholder.mp4"></video> */}
     </section>
   )
 }

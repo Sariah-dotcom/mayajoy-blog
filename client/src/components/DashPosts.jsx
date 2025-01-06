@@ -8,6 +8,7 @@ export default function DashPosts() {
   const [userPosts, setUserPosts] = useState([])
 
   const[showMore, setShowMore] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   // console.log(userPosts)
 
@@ -117,5 +118,5 @@ export default function DashPosts() {
         <p>You have no posts</p>
       )}
     </div>
-  )
+  );
 }

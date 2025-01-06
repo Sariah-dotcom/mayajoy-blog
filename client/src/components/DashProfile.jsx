@@ -33,8 +33,6 @@ export default function DashProfile() {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      // setUpdateUserError(null);
-      // setUpdateUserSuccess(null);
 
       if (Object.keys(formData).length === 0) {
         setUpdateUserError('No changes made');
@@ -52,14 +50,11 @@ export default function DashProfile() {
         const data = await res.json();
         if (!res.ok) {
           dispatch(updateFailure(data.message));
-          // setUpdateUserError(data.message);
         } else {
           dispatch(updateSuccess(data));
-          // setUpdateUserSuccess("User's profile updated successfully");
         }
       } catch (error) {
         dispatch(updateFailure(error.message));
-        // setUpdateUserError(error.message);
       }
     }
   
