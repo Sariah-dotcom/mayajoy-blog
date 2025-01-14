@@ -29,8 +29,8 @@ export default function Hero() {
 
   return (
     <section className='h-[60vh] flex flex-col items-center justify-center gap-5'>
-      <div className='flex items-center justify-center px-5'>
-        <div className='font-libre uppercase text-4xl lg:text-8xl text-dark-green'>
+      <div className='flex items-center justify-center px-5 z-10'>
+        <div className='font-libre uppercase text-4xl lg:text-8xl'>
           <p className='hero-text'>Caputuring</p>
           <p className='hero-text'>the art of</p>
           <p className='hero-text'><span className='font-playfair italic lowercase'>everyday life</span></p>
@@ -39,6 +39,9 @@ export default function Hero() {
         <div>
           <h2 className='name-text text-xs uppercase font-semibold font-lato text-grey rotate-90'>Maya Abdoussala</h2>
         </div>
+      </div>
+      <div className='absolute'>
+        <img className='h-[30rem] opacity-50' src="maya.jpg" alt="" />
       </div>
     </section>
   )
