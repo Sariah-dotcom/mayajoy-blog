@@ -8,7 +8,7 @@ import { FaCheck, FaTimes } from 'react-icons/fa';
 export default function DashUsers() {
   const { currentUser } = useSelector((state) => state.user)
   const [users, setUsers] = useState([])
-  const [userIdToDelete, setuserIdToDelete] = useState(null);
+  const [userIdToDelete, setUserIdToDelete] = useState(null);
 
   const[showMore, setShowMore] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -40,9 +40,7 @@ export default function DashUsers() {
   const handleShowMore = async () => {
     const startIndex = users.length;
     try {
-      const res = await fetch(
-        `/api/user/getusers?startIndex=${startIndex}`
-      );
+      const res = await fetch(`/api/user/getusers?startIndex=${startIndex}`);
       const data = await res.json();
       if (res.ok) {
         setUsers((prev) => [...prev, ...data.users]);
@@ -57,10 +55,9 @@ export default function DashUsers() {
 
 //   Delete a user
   const handleDeleteUser = async () => {
-    setShowModal(false);
     try {
       const res = await fetch(
-        `/api/user/deleteuser/${userIdToDelete}/${currentUser._id}`,
+        `/api/user/delete/${userIdToDelete}`,
         {
           method: 'DELETE',
         }
@@ -69,10 +66,10 @@ export default function DashUsers() {
       if (!res.ok) {
         console.log(data.message);
       } else {
-        console.log('Delete successful, updating users.');
         setUsers((prev) =>
           prev.filter((user) => user._id !== userIdToDelete)
         );
+        setShowModal(false);
       }
     } catch (error) {
       console.log(error.message);
