@@ -30,7 +30,7 @@ export default function App() {
             <Route path='/create-post' element={<CreatePost/>} />
             <Route path='/update-post/:postId' element={<UpdatePost/>} />
           </Route>
-          <Route path='/posts' element={<Posts />} />
+          <Route path='/post/:postSlug' element={<Posts />} />
       </Routes>
       <Footer />
     </BrowserRouter>
