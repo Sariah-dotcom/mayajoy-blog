@@ -8,38 +8,40 @@ export default function Footer() {
 
     return (
         <div>
-            <footer>
-                <div className="py-5 px-8 border-t-1 border-dark-green">
+            <footer className="border-t border-black pb-5">
 
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-col justify-between items-center pt-5 lg:flex-row">
                         <div className="">
-                            <img src="/mj-logo.png" alt="logo" className='h-36'/>
+                            <h2 className="font-libre text-4xl">The Maya <br /> Joy Blog</h2>
                         </div>
 
-                        <div className="flex gap-10 font-semibold">
-                            <Link to='/' className="text-dark-green hover:text-med-green">Home</Link>
-                            <Link to='/about' className="text-dark-green hover:text-med-green">About</Link>
-                            <Link to='/posts' className="text-dark-green hover:text-med-green">Blog Posts</Link>
+                        <div className="flex gap-10 font-semibold uppercase font-dm">
+                            <Link to='/' className="hover:text-dark-green">Home</Link>
+                            <Link to='/about' className="hover:text-dark-green">About</Link>
+                            <Link to='/posts' className="hover:text-dark-green">Blog Posts</Link>
                         </div>
+
+                        <img src="/barcode.png" alt="barcode" />
                     </div>
 
-                    <hr className="border-med-green" />
+                    <div className="flex items-center justify-between py-2 text-xs">
+                        <div className="flex gap-1">
+                            <p>Site by <a className="italic hover:underline" href="https://www.sariahjackson.com/" target="_blank">Sariah Jackson</a></p>
+                        </div>
 
-                    <div className="flex items-center justify-between gap-10 py-5 text-med-green">
                         <div className="flex gap-1">
                             <p>©</p>
                             {year}
                             <p>Maya Joy Blog</p>
                         </div>
 
-                        <div className="flex gap-5">
+                        {/* <div className="flex gap-5">
                             <FaPinterest />
                             <FaInstagramSquare />
                             <MdEmail />
-                        </div>
+                        </div> */}
                     </div>
 
-                </div>
 
             </footer>
         </div>
