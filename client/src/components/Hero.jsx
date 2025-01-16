@@ -29,6 +29,7 @@ export default function Hero() {
 
   return (
     <section className='flex flex-col gap-10'>
+      {/* <img className='absolute -z-10' src="/paper.png" alt="" /> */}
       <div>
         <h1 className='text-center uppercase font-libre text-6xl py-5 lg:text-8xl'>The Maya Joy Blog</h1>
         <hr className='border-black' />

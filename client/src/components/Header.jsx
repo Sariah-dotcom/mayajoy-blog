@@ -29,7 +29,7 @@ export default function Header() {
   };
 
   return (
-    <Navbar className='bg-eggshell text-black font-dm uppercase font-semibold border-t border-b border-black'>
+    <Navbar className='bg-transparent text-black font-dm uppercase font-semibold border-t border-b border-black'>
 
       <Link to='/'>
         <p>Issue 1 2025</p>

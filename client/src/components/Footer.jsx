@@ -29,7 +29,7 @@ export default function Footer() {
                             <p>Site by <a className="italic hover:underline" href="https://www.sariahjackson.com/" target="_blank">Sariah Jackson</a></p>
                         </div>
 
-                        <div className="flex gap-1">
+                        <div className="flex gap-1 items-center">
                             <p>©</p>
                             {year}
                             <p>Maya Joy Blog</p>
