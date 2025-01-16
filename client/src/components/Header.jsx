@@ -29,10 +29,11 @@ export default function Header() {
   };
 
   return (
-    <Navbar className='py-4 font-lato font-semibold'>
+    <Navbar className='bg-eggshell text-black font-dm uppercase font-semibold border-t border-b border-black'>
 
       <Link to='/'>
-        <img className='w-24' src="/mj-logo.png" alt="logo" />
+        <p>Issue 1 2025</p>
+        {/* <img className='w-24' src="/mj-logo.png" alt="logo" /> */}
       </Link>
 
       <div className="flex gap-2 md:order-2">

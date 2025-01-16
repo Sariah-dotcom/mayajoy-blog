@@ -11,7 +11,7 @@ export default {
       fontFamily: {
         'libre': ['Libre Calson Display', 'serif'],
         'playfair': ['Playfair Display', 'serif'],
-        'lato': ['DM Sans', 'sans-serif'],
+        'dm': ['DM Sans', 'sans-serif'],
       },
       colors: {
         'bright-green': '#095200',
@@ -19,7 +19,8 @@ export default {
         "med-green": "#508D4E",
         "light-green": "#BFD8AF",
         "lighter-green": "#D4E7C5",
-        "grey":"#6B6B6B"
+        "grey":"#6B6B6B",
+        "eggshell": "#fffff2"
       },
     },
   },

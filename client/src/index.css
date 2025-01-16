@@ -5,6 +5,22 @@
 body {
     background-color: #fffff2;
     height: 100vh;
+    padding: 30px;
+}
+
+@media screen and (min-width:768px){
+    body {
+        padding: 60px;
+    }
+}
+
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'DM Sans';
 }
 
 .ql-editor {

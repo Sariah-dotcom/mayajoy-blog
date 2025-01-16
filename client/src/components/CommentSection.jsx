@@ -98,7 +98,7 @@ export default function CommentSection({ postId }) {
             onChange={(e) => setComment(e.target.value)}
             value={comment}
           />
-          <div className="flex justify-between my-4">
+          <div className="flex justify-between items-center my-4">
             <p>{200 - comment.length} characters remaining</p>
             <Button type="submit">Submit</Button>
           </div>

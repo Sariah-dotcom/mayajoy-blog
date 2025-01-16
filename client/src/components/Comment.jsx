@@ -20,7 +20,7 @@ export default function Comment({comment}) {
       }, [comment]);
 
   return (
-    <div className='flex p-4 border-b text-sm'>
+    <div className='flex p-4 border-b text-sm font-dm'>
       <div className="flex-shrink-0 mr-3">
         <img className='w-10 h-10 rounded-full' src={user.profilePicture} alt={user.username} />
       </div>
