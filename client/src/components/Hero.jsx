@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       <div className='lg:w-1/2 flex flex-col gap-5'>
-        <h1 className='font-libre text-4xl'>Capturing the art <br /> of everyday life</h1>
+        <h1 className='font-libre text-3xl'>Capturing the art <br /> of everyday life</h1>
         <p className='font-xs italic font-bold'>11th May 2025</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>

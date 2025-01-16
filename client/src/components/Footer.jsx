@@ -12,7 +12,7 @@ export default function Footer() {
 
                     <div className="flex flex-col justify-between items-center pt-5 lg:flex-row">
                         <div className="">
-                            <h2 className="font-libre text-4xl">The Maya <br /> Joy Blog</h2>
+                            <h2 className="font-libre text-4xl py-5">The Maya <br /> Joy Blog</h2>
                         </div>
 
                         <div className="flex gap-10 font-semibold uppercase font-dm">
