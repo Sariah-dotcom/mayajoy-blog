@@ -5,7 +5,7 @@ import RecentPosts from '../components/RecentPosts'
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="home flex flex-col gap-10">
         <Hero />
         <About />
         <RecentPosts />

@@ -18,7 +18,6 @@ export default function CommentSection({ postId }) {
     if (comment.length > 200) {
       return;
     }
-
     try {
       const res = await fetch("/api/comment/create", {
         method: "POST",
@@ -88,6 +87,14 @@ export default function CommentSection({ postId }) {
     }
   }
 
+  const handleEdit = async (comment, editedContent) => {
+    setComments(
+      comments.map((c)=>
+        c._id === comment._id ? {...c, content: editedContent} : c
+      )
+    );
+  };
+
   return (
     <div className="max-w-2xl mx-auto p-3 w-full">
       {currentUser ? (
@@ -153,7 +160,7 @@ export default function CommentSection({ postId }) {
 
           {comments.map((comment) => (
               <Comment
-                key={comment._id} comment={comment} onLike={handleLike}/>
+                key={comment._id} comment={comment} onLike={handleLike} onEdit={handleEdit}/>
             ))
           }
         </>

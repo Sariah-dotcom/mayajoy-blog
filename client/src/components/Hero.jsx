@@ -29,17 +29,19 @@ export default function Hero() {
 
   return (
     <section className='flex flex-col gap-10'>
-      {/* <img className='absolute -z-10' src="/paper.png" alt="" /> */}
-      <div>
-        <h1 className='text-center uppercase font-libre text-6xl py-5 lg:text-8xl'>The Maya Joy Blog</h1>
-        <hr className='border-black' />
-      </div>
-
-      <div className='lg:w-1/2 flex flex-col gap-5'>
-        <h1 className='font-libre text-3xl'>Capturing the art <br /> of everyday life</h1>
-        <p className='font-xs italic font-bold'>11th May 2025</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
+      <img className='lg:px-[10rem] mt-[8rem]' src="/hero-title.png" alt="maya joy blog" />
+      
+      <div className='flex justify-between items-center'>
+        <div className='lg:w-1/2 flex flex-col gap-5 pr-5'>
+          <p className='font-xs italic font-bold'>11th May 2025</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore mollitia eac</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
+        </div>
+        
+        <div className='hidden lg:inline w-1/2 flex flex-col gap-5 pr-5'>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore mollitia eac</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
+        </div>
       </div>
     </section>
     // <section className='h-[60vh] flex flex-col items-center justify-center gap-5'>
