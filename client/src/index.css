@@ -4,17 +4,19 @@
 
 body {
     background-color: #fffff2;
-    height: 100vh;
     padding: 20px 30px;
-    background: url(/paper-4.png);
 }
 
+/* .home {
+    background: url(/paper-4.png);
+} */
+
 @media screen and (min-width:768px){
-    body {
+    /* .home {
         padding: 30px 80px;
         background-repeat: no-repeat;
         background-size: cover;
-    }
+    } */
 }
 
 
