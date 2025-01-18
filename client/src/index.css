@@ -4,7 +4,7 @@
 
 body {
     /* background-color: #fffff2; */
-    padding: 20px 30px;
+    padding: 5rem 2rem 0.5rem;
 }
 
 /* .home {
@@ -12,11 +12,9 @@ body {
 } */
 
 @media screen and (min-width:768px){
-    /* .home {
-        padding: 30px 80px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    } */
+   body {
+        padding: 8rem 6rem 0.5rem;
+   }
 }
 
 

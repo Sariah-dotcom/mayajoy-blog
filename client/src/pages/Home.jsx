@@ -5,8 +5,8 @@ import About from '../components/About'
 export default function Home() {
   return (
     <div className="home flex flex-col gap-10">
-        <Hero />
-        <About />
+      <Hero />
+      <About />
     </div>
     
   )

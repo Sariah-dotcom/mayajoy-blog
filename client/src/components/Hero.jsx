@@ -4,6 +4,12 @@ import { useGSAP } from "@gsap/react";
 
 export default function Hero() {
 
+  const currentDate = (() => {
+    const now = new Date();
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    return now.toLocaleDateString('en-GB', options).replace(',', '');
+  })();
+
   // useGSAP(()=>{
   //   gsap.fromTo(".hero-text", {
   //     opacity: 0,
@@ -29,36 +35,30 @@ export default function Hero() {
 
   return (
     <section className='flex flex-col gap-10'>
-      <img className='lg:px-[10rem] mt-[8rem]' src="/hero-title.png" alt="maya joy blog" />
-      
-      <div className='flex justify-between items-center'>
+      <div className='flex flex-col-reverse lg:flex-row gap-10 justify-between'>
+        
         <div className='lg:w-1/2 flex flex-col gap-5 pr-5'>
-          <p className='font-xs italic font-bold'>11th May 2025</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore mollitia eac</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
+          <h1 className='font-playfair text-4xl'>Capturing the art of everyday life</h1>
+          <p className='font-xs italic font-bold'>{currentDate}</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, 
+            facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem
+            eum vero distinctio saepe mollitia ea, dolorum inventore mollitia eac
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam non molestias. 
+            Rerum dolorum sequi recusandae sed voluptatum magnam aliquid, accusantium in. Ad dignissimos
+            ipsum officia reiciendis perferendis necessitatibus repudiandae!
+          </p>
+
+          <p className='hidden md:inline'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, 
+            facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem
+            eum vero distinctio saepe mollitia ea, dolorum inventore mollitia eac
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam non molestias. 
+            Rerum dolorum sequi recusandae sed voluptatum magnam aliquid, accusantium in. Ad dignissimos
+            ipsum officia reiciendis perferendis necessitatibus repudiandae!
+          </p>
         </div>
         
-        <div className='hidden lg:inline w-1/2 flex flex-col gap-5 pr-5'>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore mollitia eac</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium molestias, facilis nemo corrupti non vitae, adipisci recusandae cum nesciunt fugit a voluptatem eum vero distinctio saepe mollitia ea, dolorum inventore?</p>
-        </div>
+        <img className='lg:w-1/2' src="/maya-2.jpg" alt="" />
       </div>
     </section>
-    // <section className='h-[60vh] flex flex-col items-center justify-center gap-5'>
-    //   <div className='flex items-center justify-center px-5 z-10'>
-    //     <div className='font-libre uppercase text-4xl lg:text-8xl'>
-    //       <p className='hero-text'>Caputuring</p>
-    //       <p className='hero-text'>the art of</p>
-    //       <p className='hero-text'><span className='font-playfair italic lowercase'>everyday life</span></p>
-    //     </div>
-
-    //     <div>
-    //       <h2 className='name-text text-xs uppercase font-semibold font-lato text-grey rotate-90'>Maya Abdoussala</h2>
-    //     </div>
-    //   </div>
-    //   <div className='absolute'>
-    //     <img className='h-[30rem] opacity-50' src="maya.jpg" alt="" />
-    //   </div>
-    // </section>
   )
 }
