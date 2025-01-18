@@ -25,7 +25,7 @@ export const create = async (req, res, next) => {
     }
 };
 
-// Fetch posts for display in Dashboard
+// Get posts
 export const getposts = async (req, res, next) => {
     try {
         const startIndex = parseInt(req.query.startIndex) || 0;

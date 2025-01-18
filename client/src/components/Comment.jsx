@@ -100,7 +100,7 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
         ) : (
           <>
             <p className='text-gray-500 pb-2'>{comment.content}</p>
-            <div className='flex pt-2 text-xs border-t max-w-fit gap-5'>
+            <div className='flex pt-2 text-xs max-w-fit gap-5'>
               <button
                 type='button'
                 onClick={() => onLike(comment._id)}
