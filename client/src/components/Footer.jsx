@@ -9,15 +9,20 @@ export default function Footer() {
     return (
         <div>
             <footer className="border-t border-black mt-10">
-                    <div className="flex flex-col justify-between items-center pt-5 lg:flex-row">
-                        <div className="">
-                            <h2 className="font-libre text-4xl py-5">The Maya <br /> Joy Blog</h2>
+                <div className="flex flex-col justify-between items-center pt-5 lg:flex-row">
+                        <div className="flex flex-col items-center pt-5 pb-12 lg:pb-5">
+                            <h2 className="font-libre text-4xl text-center lg:text-left">The Maya <br /> Joy Blog</h2>
+                            <div className="flex gap-5 mt-2">
+                                <FaPinterest />
+                                <FaInstagramSquare />
+                                <MdEmail />
+                            </div>
                         </div>
 
                         <div className="flex gap-10 font-semibold uppercase font-dm">
                             <Link to='/' className="hover:text-dark-green">Home</Link>
                             <Link to='/about' className="hover:text-dark-green">About</Link>
-                            <Link to='/posts' className="hover:text-dark-green">Blog Posts</Link>
+                            <Link to='/all-posts' className="hover:text-dark-green">Blog Posts</Link>
                         </div>
 
                         <img src="/barcode.png" alt="barcode" />
@@ -34,11 +39,6 @@ export default function Footer() {
                             <p>Maya Joy Blog</p>
                         </div>
 
-                        {/* <div className="flex gap-5">
-                            <FaPinterest />
-                            <FaInstagramSquare />
-                            <MdEmail />
-                        </div> */}
                     </div>
 
 

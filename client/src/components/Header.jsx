@@ -39,11 +39,11 @@ export default function Header() {
 
         <div className="flex gap-2 md:order-2">
           
-          <form className='hidden lg:inline'>
+          {/* <form className='hidden lg:inline'>
             <TextInput className='text-xs' placeholder='Search...' rightIcon={AiOutlineSearch}></TextInput>
-          </form>
+          </form> */}
 
-          <Button className='w-12 h-10 lg:hidden inline' color='#114418' pill ><AiOutlineSearch /></Button>
+          {/* <Button className='w-12 h-10 lg:hidden inline' color='#114418' pill ><AiOutlineSearch /></Button> */}
 
           {/* Dynamically update the header with user data when a user is logged in */}
           {currentUser ? (
@@ -95,8 +95,8 @@ export default function Header() {
             <Link to='/about'>About</Link>
           </Navbar.Link>
 
-          <Navbar.Link active={path === '/posts'} as={'div'}>
-            <Link to='/posts'>Blog Posts</Link>
+          <Navbar.Link active={path === '/all-posts'} as={'div'}>
+            <Link to='/all-posts'>Blog Posts</Link>
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>

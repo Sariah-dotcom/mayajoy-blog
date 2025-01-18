@@ -13,6 +13,7 @@ import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute'
 import CreatePost from './pages/CreatePost'
 import UpdatePost from './pages/UpdatePost'
 import ScrollToTop from './components/ScrollToTop'
+import AllPosts from './pages/AllPosts'
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/all-posts' element={<AllPosts />} />
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUp />} />
           <Route element={<PrivateRoute />}>
