@@ -12,7 +12,7 @@ export default function PostCard({ post }) {
       </Link>
 
       <div className='p-3 flex flex-col gap-2'>
-        <p className='text-lg font-semibold line-clamp-2'>{post.title}</p>
+        <p className='text-lg font-semibold line-clamp-2 line-clamp-2'>{post.title}</p>
         <p className='text-xs text-gray-500 -mt-2'>{new Date(post.updatedAt).toLocaleDateString()}</p>
         <span className='italic text-xs text-gray-500'>{post.category}</span>
         <Link
