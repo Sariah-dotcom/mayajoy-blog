@@ -8,8 +8,7 @@ export default function Footer() {
 
     return (
         <div>
-            <footer className="border-t border-black pb-5">
-
+            <footer className="border-t border-black mt-10">
                     <div className="flex flex-col justify-between items-center pt-5 lg:flex-row">
                         <div className="">
                             <h2 className="font-libre text-4xl py-5">The Maya <br /> Joy Blog</h2>

@@ -71,9 +71,9 @@ export default function DashboardComp() {
   }, [currentUser]);
 
   return (
-    <div className='p-3 md:mx-auto'>
+    <div>
       <div className='flex-wrap flex gap-4 justify-center'>
-        <div className='flex flex-col p-3 gap-4 md:w-72 w-full rounded-md shadow-md'>
+        <div className='flex flex-col p-3 gap-4 md:w-60 w-full rounded-md shadow-md'>
           <div className='flex justify-between'>
             <div>
               <h3 className='font-dm text-dark-green text-xl font-bold uppercase'>Total Users</h3>
@@ -130,8 +130,8 @@ export default function DashboardComp() {
         </div>
       </div>
 
-      <div className='flex flex-wrap gap-4 py-3 mx-auto justify-center'>
-        <div className='flex flex-col w-full md:w-1/2 shadow-md p-2 rounded-md'>
+      <div className='flex flex-wrap gap-4 py-3'>
+        <div className='flex flex-col w-full shadow-md p-2 rounded-md'>
           <div className='flex justify-between p-3 text-sm font-semibold'>
             <h1 className='text-center font-dm text-dark-green text-xl font-bold p-2'>Recent users</h1>
             <Button className='font-dm bg-med-green text-white' >
@@ -162,8 +162,8 @@ export default function DashboardComp() {
           </Table>
         </div>
 
-        <div className='flex flex-col w-full md:w-auto shadow-md p-2 rounded-md '>
-          <div className='flex justify-between  p-3 text-sm font-semibold'>
+        <div className='flex flex-col w-full shadow-md p-2 rounded-md '>
+          <div className='flex justify-between p-3 text-sm font-semibold'>
             <h1 className='text-center font-dm text-dark-green text-xl font-bold p-2'>Recent comments</h1>
             <Button className='font-dm bg-med-green text-white' >
               <Link to={'/dashboard?tab=comments'}>See all</Link>
