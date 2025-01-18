@@ -78,7 +78,7 @@ export default function Header() {
           (
             // Show the Sign In button if user is not logged in
             <Link to='/sign-in'>
-              <Button className='bg-dark-green hover:bg-dark-green hover:text-color-white' outline>Sign In</Button>
+              <Button className='bg-black text-white'>Sign In</Button>
             </Link>
           )
           

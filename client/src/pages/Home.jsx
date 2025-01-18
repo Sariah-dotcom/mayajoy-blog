@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch('/api/post/getPosts');
+      const res = await fetch('/api/post/getPosts?limit=3');
       const data = await res.json();
       setPosts(data.posts);
     };
@@ -33,7 +33,7 @@ export default function Home() {
               ))}
             </div>
             <Link
-              to={'/search'}
+              to={'/all-posts'}
               className='text-lg text-dark-green font-dm font-semibold hover:underline text-center'
             >
               View all posts

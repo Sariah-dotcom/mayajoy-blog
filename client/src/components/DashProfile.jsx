@@ -83,7 +83,7 @@ export default function DashProfile() {
   
   return (
     <div className='max-w-lg mx-auto p-3 w-full'>
-      <h1 className='my-7 text-center font-playfair italic text-dark-green text-4xl font-semibold'>Profile</h1>
+      <h1 className='my-7 text-center font-dm font-bold text-4xl'>Profile</h1>
       
       {/* Form to update user profiles */}
       <form onSubmit={handleSubmit} className='flex flex-col gap-5'>
@@ -95,7 +95,7 @@ export default function DashProfile() {
         <TextInput type='email' id='email' placeholder='Email' defaultValue={currentUser.email} onChange={handleChange} />
         <TextInput type='password' id='password' placeholder='Password' defaultValue='**********' onChange={handleChange}/>
 
-        <Button type='submit' className='bg-dark-green font-lato font-bold'>Update</Button>
+        <Button type='submit' className='bg-dark-green font-dm font-bold'>Update</Button>
 
         {/* Display 'Create a Post' button only is the user is an admin */}
         {
