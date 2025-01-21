@@ -5,9 +5,9 @@ export default function About() {
     <div className='flex flex-col items-center gap-5'>
       <h2 className='font-playfair text-4xl mb-3'>About Me</h2>
       <div className='flex gap-3'>
-        <img className='w-24 md:w-36 lg:w-72 mt-3 grayscale' src="/evening.jpg" alt="" />
-        <img className='w-24 md:w-36 lg:w-72 object-cover shadow-md' src="/maya-2.jpg" alt="" />
-        <img className='w-24 md:w-36 lg:w-72 mt-3' src="/bento-3.jpg" alt="" />
+        <img className='w-24 md:w-36 lg:w-72 mt-3 grayscale' src="https://i.pinimg.com/474x/39/ca/4e/39ca4e04d501a1e48db715903c9c13f6.jpg" alt="New York" />
+        <img className='w-24 md:w-36 lg:w-72 object-cover shadow-md' src="https://i.pinimg.com/736x/d6/07/ed/d607edc8f7a8fe8e1e883b94856cde3a.jpg" alt="Maya" />
+        <img className='w-24 md:w-36 lg:w-72 mt-3' src="https://i.pinimg.com/236x/3a/90/50/3a905074d7170f91236f7765fb310c7d.jpg" alt="Hotel" />
       </div>
 
       <p>
