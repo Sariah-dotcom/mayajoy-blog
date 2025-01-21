@@ -86,7 +86,7 @@ export default function DashPosts() {
         <Table hoverable className='shadow-md'>
           <TableHead>
             <TableHeadCell>Date Updated</TableHeadCell>
-            <TableHeadCell>Post Image</TableHeadCell>
+            {/* <TableHeadCell>Post Image</TableHeadCell> */}
             <TableHeadCell>Post Title</TableHeadCell>
             <TableHeadCell>Category</TableHeadCell>
             <TableHeadCell>Delete</TableHeadCell>
@@ -94,17 +94,17 @@ export default function DashPosts() {
           </TableHead>
 
           {userPosts.map((post)=>(
-            <TableBody className='divide-y'>
+            <TableBody className='divide-y font-dm' key={post._id}>
               <TableRow>
                 {/* Display the repective post date */}
                 <TableCell>{new Date(post.updatedAt).toLocaleDateString()}</TableCell>
                 
                 {/* Display post image */}
-                <TableCell>
+                {/* <TableCell>
                   <Link to={`/post/${post.slug}`}>
                     <img src={post.image} alt={post.title} className='w-20 h-10 object-cover'  />
                   </Link>
-                </TableCell>
+                </TableCell> */}
 
                 {/* Display post title */}
                 <TableCell>

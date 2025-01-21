@@ -91,7 +91,7 @@ export default function DashUsers() {
           </TableHead>
 
           {users.map((user)=>(
-            <TableBody className='divide-y' key={user._id}>
+            <TableBody className='divide-y font-dm' key={user._id}>
               <TableRow>
                 {/* Display the repective creation date */}
                 <TableCell>{new Date(user.createdAt).toLocaleDateString()}</TableCell>

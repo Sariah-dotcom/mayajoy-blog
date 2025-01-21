@@ -10,11 +10,15 @@ export default function Footer() {
         <div>
             <footer className="border-t border-black mt-10">
                 <div className="flex flex-col justify-between items-center pt-5 lg:flex-row">
-                        <div className="flex flex-col items-center pt-5 pb-12 lg:pb-5">
+                        <div className="flex flex-col items-center lg:items-baseline pt-5 pb-12 lg:pb-5">
                             <h2 className="font-libre text-4xl text-center lg:text-left">The Maya <br /> Joy Blog</h2>
                             <div className="flex gap-5 mt-2">
-                                <FaPinterest />
-                                <FaInstagramSquare />
+                                <Link to='https://www.pinterest.com/themayajoy/'>
+                                    <FaPinterest />
+                                </Link>
+                                <Link>
+                                    <FaInstagramSquare />
+                                </Link>
                                 <MdEmail />
                             </div>
                         </div>

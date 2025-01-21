@@ -31,7 +31,9 @@ export default function Header() {
 
   return (
     <>
-      <h1 className='text-7xl md:text-[110px] text-center font-playfair leading-[55px] md:leading-[80px] mb-10'>The Maya Joy Blog</h1>
+      <Link to='/'>
+        <h1 className='text-7xl md:text-[110px] text-center font-playfair leading-[55px] md:leading-[80px] mb-10'>The Maya Joy Blog</h1>
+      </Link>
       <Navbar className='bg-transparent text-black font-dm uppercase border-t border-b border-black mb-10 lg:mb-20'>
         <Link to='/'>
           <p className='text-xs'>Issue 1 {year}</p>

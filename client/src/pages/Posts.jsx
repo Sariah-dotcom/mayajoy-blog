@@ -61,13 +61,13 @@ export default function Posts() {
   )
   return (
     <main className='flex flex-col max-w-6xl mx-auto min-h-screen lg:-mt-10'>
-      <h1 className='font-playfair font-normal text-4xl mt-10 text-center max-w-2xl mx-auto lg:text-5xl'>{post && post.title}</h1>
+      <h1 className='font-dm text-4xl mt-10 text-center max-w-2xl mx-auto lg:text-5xl'>{post && post.title}</h1>
       
       <Link to={`search?category=${post && post.cateory}`} className='self-center mt-5'>
         <Button color='gray' pill size='xs'>{post && post.category}</Button>
       </Link>
 
-      <img src={post && post.image} alt={post && post.title} className='mt-10 max-h-[500px] lg:w-[80%] mx-auto object-cover' />
+      {/* <img src={post && post.image} alt={post && post.title} className='mt-10 max-h-[500px] lg:w-[80%] mx-auto object-cover' /> */}
 
       <div className='flex justify-between py-3 mt-5 border-b text-xs'>
         <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
-import About from '../components/About'
+// import About from '../components/About'
 import PostCard from '../components/PostCard';
 import { Link } from 'react-router-dom';
 import BentoGrid from '../components/BentoGrid';
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="home flex flex-col gap-10">
       <Hero />
-      <About />
+      {/* <About /> */}
 
       {/* Display recent posts */}
       <div className='max-w-6xl flex flex-col gap-10 py-10 border-t border-b border-black'>

@@ -72,14 +72,14 @@ export default function DashboardComp() {
 
   return (
     <div>
-      <div className='flex-wrap flex gap-4 justify-center'>
+      <div className='flex-wrap flex gap-4 justify-center font-dm'>
         <div className='flex flex-col p-3 gap-4 md:w-60 w-full rounded-md shadow-md'>
           <div className='flex justify-between'>
             <div>
               <h3 className='font-dm text-dark-green text-xl font-bold uppercase'>Total Users</h3>
               <p className='text-2xl'>{totalUsers}</p>
             </div>
-            <HiOutlineUserGroup className='bg-med-green text-white rounded-full text-5xl p-3 shadow-lg' />
+            <HiOutlineUserGroup className='bg-black text-white rounded-full text-5xl p-3 shadow-lg' />
           </div>
 
           <div className='flex gap-2 text-sm'>
@@ -99,7 +99,7 @@ export default function DashboardComp() {
               </h3>
               <p className='text-2xl'>{totalComments}</p>
             </div>
-            <HiAnnotation className='bg-med-green text-white rounded-full text-5xl p-3 shadow-lg' />
+            <HiAnnotation className='bg-black text-white rounded-full text-5xl p-3 shadow-lg' />
           </div>
 
           <div className='flex gap-2 text-sm'>
@@ -117,7 +117,7 @@ export default function DashboardComp() {
               <h3 className='font-dm text-dark-green text-xl font-bold text-md uppercase'>Total Posts</h3>
               <p className='text-2xl'>{totalPosts}</p>
             </div>
-            <HiDocumentText className='bg-med-green text-white rounded-full text-5xl p-3 shadow-lg' />
+            <HiDocumentText className='bg-black text-white rounded-full text-5xl p-3 shadow-lg' />
           </div>
 
           <div className='flex gap-2 text-sm'>
@@ -134,11 +134,12 @@ export default function DashboardComp() {
         <div className='flex flex-col w-full shadow-md p-2 rounded-md'>
           <div className='flex justify-between p-3 text-sm font-semibold'>
             <h1 className='text-center font-dm text-dark-green text-xl font-bold p-2'>Recent users</h1>
-            <Button className='font-dm bg-med-green text-white' >
+            <Button className='font-dm bg-black text-white' >
               <Link to={'/dashboard?tab=users'}>See all</Link>
             </Button>
           </div>
-          <Table hoverable>
+
+          <Table hoverable className='font-dm'>
             <Table.Head>
               <Table.HeadCell>User image</Table.HeadCell>
               <Table.HeadCell>Username</Table.HeadCell>
@@ -165,12 +166,12 @@ export default function DashboardComp() {
         <div className='flex flex-col w-full shadow-md p-2 rounded-md '>
           <div className='flex justify-between p-3 text-sm font-semibold'>
             <h1 className='text-center font-dm text-dark-green text-xl font-bold p-2'>Recent comments</h1>
-            <Button className='font-dm bg-med-green text-white' >
+            <Button className='font-dm bg-black text-white' >
               <Link to={'/dashboard?tab=comments'}>See all</Link>
             </Button>
           </div>
 
-          <Table hoverable>
+          <Table hoverable className='font-dm'>
             <Table.Head>
               <Table.HeadCell>Comment content</Table.HeadCell>
               <Table.HeadCell>Likes</Table.HeadCell>
@@ -192,14 +193,14 @@ export default function DashboardComp() {
         <div className='flex flex-col w-full shadow-md p-2 rounded-md'>
           <div className='flex justify-between p-3 text-sm font-semibold'>
             <h1 className='text-center font-dm text-dark-green text-xl font-bold p-2'>Recent posts</h1>
-            <Button className='font-dm bg-med-green text-white' >
+            <Button className='font-dm bg-black text-white' >
               <Link to={'/dashboard?tab=posts'}>See all</Link>
             </Button>
           </div>
 
-          <Table hoverable>
+          <Table hoverable className='font-dm'>
             <Table.Head>
-              <Table.HeadCell>Post image</Table.HeadCell>
+              {/* <Table.HeadCell>Post image</Table.HeadCell> */}
               <Table.HeadCell>Post Title</Table.HeadCell>
               <Table.HeadCell>Category</Table.HeadCell>
             </Table.Head>
@@ -207,13 +208,13 @@ export default function DashboardComp() {
               posts.map((post) => (
                 <Table.Body key={post._id} className='divide-y'>
                   <Table.Row className='bg-white'>
-                    <Table.Cell>
+                    {/* <Table.Cell>
                       <img
                         src={post.image}
                         alt='user'
                         className='w-14 h-10 rounded-md bg-gray-500'
                       />
-                    </Table.Cell>
+                    </Table.Cell> */}
                     <Table.Cell className='w-96'>{post.title}</Table.Cell>
                     <Table.Cell className='w-5'>{post.category}</Table.Cell>
                   </Table.Row>

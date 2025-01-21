@@ -4,7 +4,7 @@
 
 body {
     padding: 5rem 2rem 0.5rem;
-    /* background: url(/paper.png); */
+    background: url(/paper.png);
 }
 
 @media screen and (min-width:768px){
@@ -27,7 +27,7 @@ p {
 }
 
 .post-content p {
-    margin-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
 }
 
 .post-content h1 {
