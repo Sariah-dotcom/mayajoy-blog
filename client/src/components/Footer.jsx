@@ -16,10 +16,6 @@ export default function Footer() {
                                 <Link to='https://www.pinterest.com/themayajoy/'>
                                     <FaPinterest />
                                 </Link>
-                                <Link>
-                                    <FaInstagramSquare />
-                                </Link>
-                                <MdEmail />
                             </div>
                         </div>
 
