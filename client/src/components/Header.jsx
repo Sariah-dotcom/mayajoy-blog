@@ -1,10 +1,12 @@
 import React from 'react';
-import { AiOutlineSearch } from 'react-icons/ai';
-import  { Avatar, Button, Dropdown, DropdownDivider, Navbar, TextInput } from 'flowbite-react';
+// import { AiOutlineSearch } from 'react-icons/ai';
+import  { Avatar, Button, Dropdown, DropdownDivider, Navbar } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Header() {
 
@@ -29,12 +31,28 @@ export default function Header() {
     }
   };
 
+  useGSAP(() => {
+    gsap.fromTo('.title, .nav-bar', 
+      {
+        opacity: 0,
+        y: -100
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power1.inOut',
+        stagger: 0.5
+      }
+    )
+  })
+
   return (
     <>
       <Link to='/'>
-        <h1 className='text-6xl md:text-[110px] text-center font-playfair leading-[55px] md:leading-[80px] mb-10'>The Maya Joy Blog</h1>
+        <h1 className='title text-5xl md:text-[110px] text-center font-playfair leading-[55px] md:leading-[80px] mb-10'>The Maya Joy Blog</h1>
       </Link>
-      <Navbar className='bg-transparent text-black font-dm uppercase border-t border-b border-black mb-10 lg:mb-20'>
+      <Navbar className='nav-bar bg-transparent text-black font-dm uppercase border-t border-b border-black mb-10 lg:mb-20'>
         <Link to='/'>
           <p className='text-xs'>Issue 1 {year}</p>
         </Link>
