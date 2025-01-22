@@ -27,12 +27,16 @@ p {
 }
 
 .post-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.post-content h1, h2, h3 {
+    margin-bottom: 0.8rem;
 }
 
 .post-content h1 {
-    font-family: 'Playfair Display', serif;
     font-weight: 520;
+    font-size: 2rem;
 }
 
 .post-content h2, h3 {
@@ -40,10 +44,6 @@ p {
     font-family: 'DM Sans', sans-serif;
 }
 
-.post-content h1 {
-    font-size: 2rem;
-}
-
 .post-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
