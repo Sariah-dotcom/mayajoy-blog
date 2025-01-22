@@ -60,7 +60,7 @@ export default function Hero() {
           </p>
         </div>
         
-        <img className='right lg:w-1/2 object-cover' src="/maya.jpg" alt="Maya" />
+        <img className='right -z-10 lg:w-1/2 object-cover' src="/maya.jpg" alt="Maya" />
       </div>
     </section>
   )
